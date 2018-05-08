@@ -1,18 +1,36 @@
-$('#submit').on('click', function(){
-    let values = [];
-    var name = $('#name').val();
-    var photoUrl = $('#photo').val();
-    for (let i = 1; i <= 10; i++) {
-      if (!isNaN(parseInt($("#q" + i + " option:selected").attr('value'))))
-      values.push(parseInt($("#q" + i + " option:selected").attr('value')));
-    };
-    if (values.length == 10 && name != "" && photoUrl != ""){
-      console.log(values, name, photoUrl);
-      $('#results-modal').modal('show');
-    }
-    else{
-      console.log("incomplete");
-    };
-  
-    
-  })
+var friendsData = [
+	{
+		name: 'Snoop Dogg',
+		photo: 'https://goo.gl/images/D4oVX8',
+		scores: [
+      '1',
+			'2',
+			'3',
+			'4',
+			'5',
+			'1',
+			'2',
+			'3',
+			'4',
+			'5'
+		]
+	},
+	{
+		name: 'Dr. Dre',
+		photo: 'https://goo.gl/images/Gy5tbq',
+		scores: [
+			'1',
+			'1',
+			'1',
+			'1',
+			'2',
+			'2',
+			'2',
+			'2',
+			'3',
+			'3'
+		]
+	},
+];
+
+module.exports = friendsData;

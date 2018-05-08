@@ -1,12 +1,14 @@
-var friendData = require('../data/friends');
+var path = require('path');
+var friends = require('../data/friends.js');
 
 module.exports = function (app) {
-  app.get('/app/data/friends.js', function (req, res, next) {
-    res.json(friendData)
+  app.get('/api/friends', function (req, res, next) {
+    res.json(friends)
   })
-  app.post('/app/data/friends.js', function (req, res, next) {
+  app.post('/api/friends', function (req, res, next) {
     console.log(req.body)
-    res.json(friendData)
+    res.json(friends)
   })
   
 };
+
