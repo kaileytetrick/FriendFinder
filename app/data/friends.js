@@ -9,7 +9,8 @@ $('#submit').on('click', function(){
     if (values.length == 10 && name != "" && photoUrl != ""){
       console.log(values, name, photoUrl);
       $('#results-modal').modal('show');
-    }else{
+    }
+    else{
       console.log("incomplete");
     };
   
