@@ -11,5 +11,5 @@ app.use(express.static('./app/public'));
 require('./app/routing/htmlRoutes')(app)
 
 app.listen(port, function () {
-  `on ${port}`
+  `listening on ${port}`
 })
